@@ -22,7 +22,7 @@
 
                 <input type="email" class="form-control mt-5" name="email" placeholder="email">
 
-                <input type="submit" class="form-control mt-5 btn btn-success" name="">
+                <input type="submit" class="form-control mt-5 btn btn-success" value="submit">
             </form>
 
         </div>
@@ -37,13 +37,15 @@
        </tr>
     </thread>
    <tbody class="table-group-divider">
+   {% for data in d %}
    <tr>
-       <th scope="row"></th>
-       <th>Mark</th>
-       <th>Otto</th>
-       <th>@ndo</th>
+       <th scope="row">{{ data.id }}</th>
+       <td>{{ data.name }}</td>
+       <td>{{ data.school }}</td>
+       <td>{{ data.email }}</td>
 
    </tr>
+   {% endfor %}
 
    </tbody>
         </table>
